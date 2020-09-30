@@ -24,7 +24,5 @@ public class App {
         double salarioComBonus = calculaSalarioFinal(salarioFixo, valorVendasEfetuadas);
 
         System.out.printf("TOTAL = R$ %.2f", salarioComBonus);
-
     }
-
 }
