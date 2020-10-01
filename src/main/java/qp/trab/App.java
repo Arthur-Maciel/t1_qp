@@ -10,8 +10,8 @@ public class App {
         return valorVendas*taxaComissao;
     }
 
-    public static double calculaSalarioFinal(double salarioFixo, double valorVendasEfetuadas) {
-        return salarioFixo + calculaComissao(valorVendasEfetuadas);
+    public static double calculaSalarioFinal(double salarioFixo, double comissao) {
+        return salarioFixo + comissao;
     }
 
     public static void main(String[] args) {
@@ -20,8 +20,9 @@ public class App {
         String nome = sc.nextLine();
         double salarioFixo = sc.nextDouble();
         double valorVendasEfetuadas = sc.nextDouble();
-
-        double salarioComBonus = calculaSalarioFinal(salarioFixo, valorVendasEfetuadas);
+        
+        double comissao = calculaComissao(valorVendasEfetuadas);
+        double salarioComBonus = calculaSalarioFinal(salarioFixo, comissao);
 
         System.out.printf("TOTAL = R$ %.2f", salarioComBonus);
     }
