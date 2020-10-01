@@ -1,8 +1,7 @@
 package qp.trab;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.*;
 
-
-public class AppTest extends TestCase {
+class AppTest {
 
 }
