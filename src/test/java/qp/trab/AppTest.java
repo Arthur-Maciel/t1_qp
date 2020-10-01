@@ -1,7 +1,7 @@
 package qp.trab;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class AppTest {
+public class AppTest {
 
 }
