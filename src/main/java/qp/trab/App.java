@@ -17,12 +17,27 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Informe seu nome.");
         String nome = sc.nextLine();
+
+        System.out.println("Informe seu salário fixo.");
         double salarioFixo = sc.nextDouble();
+
+        while(salarioFixo < 0) {
+            System.out.println("Informe valores positivos.");
+            salarioFixo = sc.nextDouble();
+        }
+
+        System.out.println("Informe o valor total de suas vendas efetuadas.");
         double valorVendasEfetuadas = sc.nextDouble();
+
+        while(valorVendasEfetuadas < 0) {
+            System.out.println("Informe valores positivos.");
+            valorVendasEfetuadas = sc.nextDouble();
+        }
 
         double salarioComBonus = calculaSalarioFinal(salarioFixo, valorVendasEfetuadas);
 
-        System.out.printf("TOTAL = R$ %.2f", salarioComBonus);
+        System.out.printf(nome + " - TOTAL = R$ %.2f", salarioComBonus);
     }
 }
